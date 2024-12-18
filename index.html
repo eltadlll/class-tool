@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade & Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Grade & Notes App</h1>
+        </header>
+
+        <!-- Grade Calculator Section -->
+        <section id="grade-calculator">
+            <h2>Grade Calculator</h2>
+            <div id="grade-inputs">
+                <div class="grade-row">
+                    <input type="number" placeholder="Grade" class="grade-input">
+                    <input type="number" placeholder="Weight (%)" class="weight-input">
+                </div>
+            </div>
+            <button id="add-grade">Add Another Grade</button>
+            <button id="calculate">Calculate</button>
+            <div id="result"></div>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes">
+            <h2>Notes</h2>
+            <textarea id="note-text" placeholder="Add a note"></textarea>
+            <button id="save-note">Save Note</button>
+            <ul id="saved-notes"></ul>
+        </section>
+
+        <!-- Ask AI Section -->
+        <section id="ask-ai">
+            <h2>Ask AI</h2>
+            <textarea id="ai-text" placeholder="Ask or paste notes here for summarizing"></textarea>
+            <button id="ask-ai-btn">Ask AI</button>
+            <div id="ai-result"></div>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <button class="nav-btn" onclick="showSection('grade-calculator')">Grade Calculator</button>
+        <button class="nav-btn" onclick="showSection('notes')">Notes</button>
+        <button class="nav-btn" onclick="showSection('ask-ai')">Ask AI</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
